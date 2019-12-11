@@ -4,6 +4,7 @@
    "name" : "wct",
    "fields" : [
       { "name" : "Name" , "type" : "string" },
-      { "name" : "Age" , "type" : "int" }
+      { "name" : "Age" , "type" : "int" },
+      { "name" : "Gender" , "type" : "string" }
    ]
 }

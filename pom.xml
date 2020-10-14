@@ -224,25 +224,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-            <!-- SR plugin -->
-            <!-- download schema to local folder -->
-            <plugin>
-                <groupId>io.confluent</groupId>
-                <artifactId>kafka-schema-registry-maven-plugin</artifactId>
-                <version>${confluent.version}</version>
-                <configuration>
-                    <schemaRegistryUrls>
-                        <param>http://127.0.0.1:8081</param>
-                    </schemaRegistryUrls>
-                    <outputDirectory>src/main/resources/io/confluent/examples/clients/avro_download/</outputDirectory>
-                    <subjectPatterns>
-                        <param>^avro-test-(key|value)$</param>
-                       <!-- <param>^payment-(key|value)$</param> -->
-                    </subjectPatterns>
-                    <subjects/>
-                </configuration>
-            </plugin>
+            </plugin>     
             <!-- test compatibility of schema from a file -->
             <plugin>
                 <groupId>io.confluent</groupId>
@@ -254,7 +236,7 @@
                     </schemaRegistryUrls>
                     <userInfoConfig>${schema.registry.basic.auth.user.info}</userInfoConfig>
                     <subjects>
-                        <flights-value>src/main/schemas/flight_v1.proto</flights-value>
+                        <flights-protobuf-value>src/main/schemas/flight_v1.proto</flights-protobuf-value>
                     </subjects>
                     <schemaTypes>
                         <flights-value>PROTOBUF</flights-value>
@@ -265,25 +247,6 @@
                     <goal>test-compatibility</goal>
                 </goals>
             </plugin>
-            <!-- register new schema from a file -->
-            <plugin>
-                <groupId>io.confluent</groupId>
-                <artifactId>kafka-schema-registry-maven-plugin</artifactId>
-                <version>${confluent.version}</version>
-                <configuration>
-                    <schemaRegistryUrls>
-                        <param>http://127.0.0.1:8081</param>
-                    </schemaRegistryUrls>
-                    <subjects>
-                       <avro-test11-value>src/main/resources/io/confluent/examples/clients/avro_download/avro-test-value.avsc</avro-test11-value>
-                    </subjects>
-                    <outputDirectory/>
-                </configuration>
-                <goals>
-                    <goal>register</goal>
-                </goals>
-            </plugin>
-
         </plugins>
     </build>
 </project>

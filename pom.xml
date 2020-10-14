@@ -86,7 +86,7 @@
                         <flights-protobuf-value>src/main/schemas/flight_v1.proto</flights-protobuf-value>
                     </subjects>
                     <schemaTypes>
-                        <flights-value>PROTOBUF</flights-value>
+                        <flights-protobuf-value>PROTOBUF</flights-protobuf-value>
                     </schemaTypes>
                     <outputDirectory/>
                 </configuration>

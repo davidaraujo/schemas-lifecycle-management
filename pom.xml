@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.confluent</groupId>
-    <artifactId>schema-management</artifactId>
+    <artifactId>schema-lifecycle-management</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <organization>
@@ -15,7 +15,7 @@
     <url>http://confluent.io</url>
 
     <description>
-        Kafka demo for Schema Registry with examples in Avro, Protobuf and JSON Schema.
+        Schemas Lifecycle Management for Confluent Cloud
     </description>
 
     <developers>
@@ -65,14 +65,12 @@
             <url>https://packages.confluent.io/maven/</url>
         </pluginRepository>
     </pluginRepositories>
-
     <dependencies>
-       
     </dependencies>
-
     <build>
         <plugins>
-            <!-- test compatibility of schema from a file -->
+            <!-- Schema Registry maven plugin -->
+            <!-- check schemas compatibility -->
             <plugin>
                 <groupId>io.confluent</groupId>
                 <artifactId>kafka-schema-registry-maven-plugin</artifactId>
@@ -83,18 +81,14 @@
                     </schemaRegistryUrls>
                     <userInfoConfig>${schema.registry.basic.auth.user.info}</userInfoConfig>
                     <subjects>
-                        <flights-protobuf-value>src/main/schemas/flight_v1.proto</flights-protobuf-value>
+                        <flights-protobuf-value>src/main/schemas/flight.proto</flights-protobuf-value>
                     </subjects>
                     <schemaTypes>
                         <flights-protobuf-value>PROTOBUF</flights-protobuf-value>
                     </schemaTypes>
                     <outputDirectory/>
                 </configuration>
-                <goals>
-                    <goal>test-compatibility</goal>
-                </goals>
-            </plugin>
+               </plugin>
         </plugins>
     </build>
 </project>
- 

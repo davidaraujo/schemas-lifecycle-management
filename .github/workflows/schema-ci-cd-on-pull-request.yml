@@ -1,0 +1,19 @@
+# This workflow is to validate a schema compatibility before it's taken for review and merge to master
+
+name: ON PULL REQUEST AND PUSH Test compatibility of schema using Schema Registry maven plugin
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build with Maven
+      run: mvn schema-registry:test-compatibility --file pom.xml

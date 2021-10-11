@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Account",
+  "type": "object",
+  "additionalProperties": false,
+  "description": "Customer account information, contains PII data.",
+  "properties": {
+    "account_id": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100,
+      "description": "Account id is a system generated id for every account created."
+    },
+    "account_type": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Account type."
+    },
+    "account_creation_date": {
+      "type": "integer",
+      "description": "Unix timestamp (seconds) for the account creation date."
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the customer."
+    },
+    "email": {
+      "type": "string",
+      "description": "Email of the customer."
+    },
+    "address": {
+      "type": "string",
+      "description": "Address of the customer."
+    },
+    "ssn": {
+      "type": "string",
+      "description": "Social security number of the customer"
+    }
+  },
+  "required": [
+    "account_id", "account_type",
+    "account_creation_date",
+    "name",
+    "email"
+  ]
+}

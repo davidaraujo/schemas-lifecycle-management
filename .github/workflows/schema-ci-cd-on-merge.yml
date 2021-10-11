@@ -1,6 +1,6 @@
 # This workflow is to register a schema on merge to master (it was previously checked for compatibility on PR)
 
-name: ON MERGE TO MASTER Register schema using Schema Registry maven plugin
+name: ON PR APPROVAL AND MERGE TO MASTER Register schema using Schema Registry maven plugin
 
 on:
   push:

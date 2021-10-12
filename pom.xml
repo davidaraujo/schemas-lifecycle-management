@@ -70,7 +70,7 @@
     <build>
         <plugins>
             <!-- Schema Registry maven plugin -->
-            <!-- check schemas compatibility -->
+            <!-- check compatibility and register schemas -->
             <plugin>
                 <groupId>io.confluent</groupId>
                 <artifactId>kafka-schema-registry-maven-plugin</artifactId>

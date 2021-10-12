@@ -39,7 +39,7 @@
     },
     "mobile_enabled": {
       "type": "boolean",
-      "description": "VIP mobile customers flag"
+      "description": "VIP mobile customers flags"
     }
   },
   "required": [

@@ -3,8 +3,9 @@
 name: ON PULL REQUEST CREATION AND PUSH Test compatibility of schema using Schema Registry maven plugin
 
 on:
-  push:
-    branches: [ master ]
+  #  run this if we want
+  #  push:
+  #  branches: [ master ]
   pull_request:
     branches: [ master ]
 

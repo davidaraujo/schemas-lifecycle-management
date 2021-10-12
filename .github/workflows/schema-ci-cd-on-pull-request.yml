@@ -15,8 +15,7 @@ jobs:
   build:
    ## run job on a GitHub-hosted runner
    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-      - name: Check schema compatibility
-      run: mvn schema-registry:test-compatibility --file pom.xml
+   steps:
+    - uses: actions/checkout@v2
+    - name: Check schema compatibility
+    run: mvn schema-registry:test-compatibility --file pom.xml

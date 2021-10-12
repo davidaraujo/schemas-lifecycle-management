@@ -17,6 +17,6 @@ jobs:
    runs-on: ubuntu-latest
 
     steps:
-    # - uses: actions/checkout@v2
-    - name: Build with Maven
+      - uses: actions/checkout@v2
+      - name: Check schema compatibility
       run: mvn schema-registry:test-compatibility --file pom.xml

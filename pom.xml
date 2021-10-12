@@ -60,7 +60,7 @@
             <url>http://packages.confluent.io/maven/</url>
         </repository>
     </repositories>
-
+    -->
     <pluginRepositories>
         <pluginRepository>
             <id>confluent</id>

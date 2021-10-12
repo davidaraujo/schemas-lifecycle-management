@@ -1,6 +1,6 @@
 # schemas-management
 
-workflow management for schemas
+Workflow management for schemas
 
 Change a schema and create a Pull Request
 - create a new branch `git checkout -b [Branch Name]`
@@ -16,5 +16,5 @@ Change a schema and create a Pull Request
 - check the status of the PR and if sucessfully completed all the tasks on ``schema-ci-cd-on-pull-request.yml``, in particular if new schema passed the maven compatibility checking ``mvn schema-registry:test-compatibility --file pom.xml``
 - if previous step is sucessful merge the PR and check if sucessfully completed all the tasks on ``schema-ci-cd-on-merge.yml`` , in particular if new schema passed the maven compatibility checking ``mvn schema-registry:register --file pom.xml``
   
-
+ref: https://www.freecodecamp.org/news/how-to-make-your-first-pull-request-on-github-3/
 

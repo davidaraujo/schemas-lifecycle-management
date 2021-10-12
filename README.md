@@ -11,7 +11,10 @@ Steps to manage schemas from development to depoyment on the Confluent Schema Re
 3. Add the changes to your branch: ``git add .``.
 4. Commit the changes: ``git commit -m "New field on schemas xpto..."``.
 5. Push the new branch to your remote: ``git push origin [Branch Name]``.
-6. Login to your GibHub remote, e.g. ``https://github.com/davidaraujo/schemas-lifecycle-management/pulls``
+6. Login to your GibHub remote, e.g. ``https://github.com/davidaraujo/schemas-lifecycle-management/pulls``, and check your new branch available for Pull Request:
+
+
+
 - click "Compare & pull request" to merge to master
 ![img.png](img.png)
 - check the status of the PR and if sucessfully completed all the tasks on ``schema-ci-cd-on-pull-request.yml``, in particular if new schema passed the maven compatibility checking ``mvn schema-registry:test-compatibility --file pom.xml``

@@ -1,18 +1,19 @@
-# This workflow is to register a schema on merge to master (it was previously checked for compatibility on PR)
+# This workflow registers schemas on Confluent Schema Registry on merge to master (following previous workflow that checks compatibility on Pull Request creation)
 
+## Name of the workflow
 name: On Pull Request approval and merge/push to master => Run Schema Registry maven plugin to register new schema
 
 on:
+  ## GiHub event that triggers the workflow
   push:
-    branches:
-      - master
+    branches: [ master ]
 
 jobs:
   build:
-
-  #  runs-on: ubuntu-latest
-
+    ## Run the job on a GitHub-hosted runner
+    runs-on: ubuntu-latest
     steps:
-   #   - uses: actions/checkout@v2
-      - name: Register schema with Schema Registry maven plugin
-        run: mvn schema-registry:register --file pom.xml -o
+      - uses: actions/checkout@v2
+      - name: Register schema on Confluent Schema Registry
+        ## Use the Confluent Schema Registry maven plugin to register the schemas
+        run: mvn schema-registry:register --file pom.xml

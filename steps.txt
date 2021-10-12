@@ -1,0 +1,5 @@
+git checkout -b new-branch-schemas-management
+git add .
+git commit -m "New field on schema xpto ...."
+// push to remote
+git push origin new-branch-schemas-management

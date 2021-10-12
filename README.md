@@ -13,12 +13,27 @@ Steps to manage schemas from development to depoyment on the Confluent Schema Re
 5. Push the new branch to your remote: ``git push origin [Branch Name]``.
 6. Login to your GibHub remote, e.g. ``https://github.com/davidaraujo/schemas-lifecycle-management/pulls``, and check your new branch available for Pull Request:
 
+![img_1.png](img_1.png)
+7. Click "Compare & pull request" to create a Pull Request.
+8. At this point the workflow in `.github/workflows/schema-ci-cd-on-pull-request.yml` will run the action to check schema compatibility and only if succeed will it create a new Pull Request:
+```
+...
+run: mvn schema-registry:test-compatibility --file pom.xml
+...
+```
+9. If compatibility checking passes a new Pull Request is created for approval:
+
+![img_2.png](img_2.png)
+10. Final step is to approve the Pull Request and merge the changes to master:
+
+![img_3.png](img_3.png)
+11. At this point the workflow in `.github/workflows/schema-ci-cd-on-merge.yml` will run the action to register the new schema on the Confluent Schema Registry:
+```
+...
+run: mvn schema-registry:register --file pom.xml
+...
+```
+12. All done, your new schemas is now live on the Confluent Schema Registry! 
 
 
-- click "Compare & pull request" to merge to master
-![img.png](img.png)
-- check the status of the PR and if sucessfully completed all the tasks on ``schema-ci-cd-on-pull-request.yml``, in particular if new schema passed the maven compatibility checking ``mvn schema-registry:test-compatibility --file pom.xml``
-- if previous step is sucessful merge the PR and check if sucessfully completed all the tasks on ``schema-ci-cd-on-merge.yml`` , in particular if new schema passed the maven compatibility checking ``mvn schema-registry:register --file pom.xml``
-  
-ref: https://www.freecodecamp.org/news/how-to-make-your-first-pull-request-on-github-3/
-
+GitHub actions workflow reference: https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions

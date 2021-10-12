@@ -1,7 +1,9 @@
 # This workflow is to validate a schema compatibility before it's taken for review and merge to master
 
-name: ON PULL REQUEST CREATION AND PUSH Test compatibility of schema using Schema Registry maven plugin
+## name of the workflow
+name: On Pull Request creation event => Run Schema Registry maven plugin to check new schema compatibility with an older schema version
 
+## GiHub event that triggers the workflow
 on:
   #  run this if we want
   #  push:
@@ -11,10 +13,10 @@ on:
 
 jobs:
   build:
-
-   # runs-on: ubuntu-latest
+   ## run job on a GitHub-hosted runner
+   runs-on: ubuntu-latest
 
     steps:
     # - uses: actions/checkout@v2
     - name: Build with Maven
-      run: mvn schema-registry:test-compatibility --file pom.xml
+      run: mvn schema-registry:test-compatibility --file pom.xml -o

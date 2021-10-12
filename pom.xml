@@ -41,7 +41,7 @@
         <schema.registry.basic.auth.user.info>
             3MBIQASABVCZ7EEL:VMUPHYilJjk2fSIvTMfUdKkzpFhGP6kzDK8HsmsJRSRdNSQ6hl2vXkLgoMNl6Uex
         </schema.registry.basic.auth.user.info>
-        <avro-maven-plugin>1.9.2</avro-maven-plugin>
+        <!-- <avro-maven-plugin>1.9.2</avro-maven-plugin>
         <protoc.jar.maven.plugin>3.11.1</protoc.jar.maven.plugin>
         <jsonschema2pojo-maven-plugin>1.0.2</jsonschema2pojo-maven-plugin>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -50,15 +50,17 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.plugin>3.8.1</maven.compiler.plugin>
-        <maven-javadoc-plugin>3.2.0</maven-javadoc-plugin>
+        <maven-javadoc-plugin>3.2.0</maven-javadoc-plugin> -->
     </properties>
-    
+
+    <!--
     <repositories>
         <repository>
             <id>confluent</id>
             <url>http://packages.confluent.io/maven/</url>
         </repository>
-    </repositories>
+    </repositories> -->
+
     <pluginRepositories>
         <pluginRepository>
             <id>confluent</id>

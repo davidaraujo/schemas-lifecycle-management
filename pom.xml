@@ -41,24 +41,9 @@
         <schema.registry.basic.auth.user.info>
             3MBIQASABVCZ7EEL:VMUPHYilJjk2fSIvTMfUdKkzpFhGP6kzDK8HsmsJRSRdNSQ6hl2vXkLgoMNl6Uex
         </schema.registry.basic.auth.user.info>
-        <avro-maven-plugin>1.9.2</avro-maven-plugin>
-        <protoc.jar.maven.plugin>3.11.1</protoc.jar.maven.plugin>
-        <jsonschema2pojo-maven-plugin>1.0.2</jsonschema2pojo-maven-plugin>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>1.8</java.version>
-        <slf4j-api.version>1.7.6</slf4j-api.version>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <maven.compiler.plugin>3.8.1</maven.compiler.plugin>
-        <maven-javadoc-plugin>3.2.0</maven-javadoc-plugin>
     </properties>
-    
-    <repositories>
-        <repository>
-            <id>confluent</id>
-            <url>http://packages.confluent.io/maven/</url>
-        </repository>
-    </repositories>
+
+
     <pluginRepositories>
         <pluginRepository>
             <id>confluent</id>
@@ -70,7 +55,7 @@
     <build>
         <plugins>
             <!-- Schema Registry maven plugin -->
-            <!-- check schemas compatibility -->
+            <!-- check compatibility and register schemas -->
             <plugin>
                 <groupId>io.confluent</groupId>
                 <artifactId>kafka-schema-registry-maven-plugin</artifactId>

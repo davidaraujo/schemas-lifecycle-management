@@ -1,6 +1,6 @@
 # This workflow is to register a schema on merge to master (it was previously checked for compatibility on PR)
 
-name: ON PR APPROVAL AND MERGE TO MASTER Register schema using Schema Registry maven plugin
+name: On Pull Request approval and merge/push to master => Run Schema Registry maven plugin to register new schema
 
 on:
   push:
@@ -10,9 +10,9 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+  #  runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Build with Maven
-        run: mvn schema-registry:register --file pom.xml
+   #   - uses: actions/checkout@v2
+      - name: Register schema with Schema Registry maven plugin
+        run: mvn schema-registry:register --file pom.xml -o

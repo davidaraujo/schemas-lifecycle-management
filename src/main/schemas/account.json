@@ -40,12 +40,12 @@
     "mobile_enabled": {
       "description": "VIP mobile app flag",
       "type": "boolean"
-    }, 
-    "mobile_enabled": {
-      "description": "VIP mobile app flag",
-      "type": "boolean"
     }
   },
+  "newfield": {
+      "description": "VIP mobile app flag",
+      "type": "string"
+    }
   "required": [
     "account_id", "account_type",
     "account_creation_date",

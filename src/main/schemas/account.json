@@ -9,7 +9,7 @@
       "type": "integer",
       "minimum": 1,
       "maximum": 100,
-      "description": "Account id is a system generated id for accountssd created."
+      "description": "Account id is a system generated id for accountsssd created."
     },
     "account_type": {
       "type": "integer",

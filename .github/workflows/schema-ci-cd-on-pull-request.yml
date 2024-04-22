@@ -22,8 +22,7 @@ jobs:
          env:
            SECRETS_VARS: ${{ secrets.SR_URL }}
          run: echo "$SECRETS_VARS"
-
-    - uses: actions/checkout@v2
+     - uses: actions/checkout@v2
     ## - name: Check schema compatibility
       ## Use the Confluent Schema Registry maven plugin to check compatibility
      ## run: mvn schema-registry:test-compatibility -Dsr.url=${sr_url} -Dsr.key=${sr_key} -Dsr.secret=${sr_secret} --file pom.xml

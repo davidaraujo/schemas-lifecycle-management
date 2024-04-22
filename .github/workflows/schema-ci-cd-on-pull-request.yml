@@ -17,9 +17,8 @@ jobs:
      sr_url: ${{ secrets.SR_URL }}
      sr_key: ${{ secrets.SR_KEY }}
      sr_secret: ${{ secrets.SR_SECRET }}
-
    steps:
     - uses: actions/checkout@v2
     - name: Check schema compatibility
       ## Use the Confluent Schema Registry maven plugin to check compatibility
-      run: mvn schema-registry:test-compatibility -Dsr.url=${{sr_url}} -Dsr.key=${{sr_key}} -Dsr.secret=${{sr_secret}} --file pom.xml
+      run: mvn schema-registry:test-compatibility -Dsr.url=${sr_url} -Dsr.key=${sr_key} -Dsr.secret=${sr_secret} --file pom.xml

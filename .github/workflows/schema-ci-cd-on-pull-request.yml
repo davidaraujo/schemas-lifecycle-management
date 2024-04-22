@@ -19,7 +19,7 @@ jobs:
      sr_secret: ${{ secrets.SR_SECRET }}
    steps:
      - uses: actions/checkout@v2
-     - name: "Echo SR URL is = "
+     - name: "Echo SR URL is the "
        run: echo ${{ secrets.SR_URL }}
      - name: Check schema compatibility
        run: mvn schema-registry:test-compatibility -Dsr.url=${{ secrets.SR_URL }} -Dsr.key=${{ secrets.SR_KEY }} -Dsr.secret=${{ secrets.SR_SECRET }} --file pom.xml

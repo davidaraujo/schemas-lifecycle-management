@@ -36,10 +36,6 @@
     "ssn": {
       "type": "string",
       "description": "Social security number of the customer"
-    },
-    "mobile_enabled": {
-      "type": "boolean",
-      "description": "VIP flag for mobile app"
     }
   },
   "required": [

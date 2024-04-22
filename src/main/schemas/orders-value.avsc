@@ -1,0 +1,30 @@
+{
+  "namespace": "io.confluent.demo.retail.pojo",
+  "name": "Order",
+  "type": "record",
+  "fields": [
+    {
+      "name": "order_id",
+      "type": "int"
+    },
+    {
+      "name": "product_id",
+      "type": "string"
+    },
+    {
+      "name": "customer_id",
+      "type": "string"
+    },
+    {
+          "name": "credit_card",
+          "type": "string"
+    },
+    {
+      "name": "ts",
+      "type" : {
+            "type" : "long",
+            "logicalType" : "timestamp-millis"
+      }
+    }
+  ]
+}

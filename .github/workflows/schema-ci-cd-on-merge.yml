@@ -16,4 +16,4 @@ jobs:
       - uses: actions/checkout@v2
       - name: Register schema on Confluent Schema Registry
         ## Use the Confluent Schema Registry maven plugin to register the schemas
-        run: mvn schema-registry:register --file pom.xml
+        run: mvn schema-registry:register --file pom.xml; mvn package

@@ -7,9 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="schemas-lifecycle-management" />
+        <module name="schema-lifecycle-management" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="schema-lifecycle-management" target="1.5" />
       <module name="schemas-lifecycle-management" target="1.8" />
     </bytecodeTargetLevel>
   </component>

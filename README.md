@@ -3,7 +3,7 @@
 
 For this project we are going to use GitHub workflows to run actions triggered by events in our schemas lifecycle, in particular:
 * Run action **check schema compatibility** when a Pull Request is created to merge a new schema to master.
-* Run action **register schema** when a Pull Request is approved and merged to master.
+* Run action **register schema** and **create artifact** when a Pull Request is approved and merged to master.
 
 Steps to manage schemas from development to depoyment on the Confluent Schema Registry:
 1. Create a new branch for your work: `git checkout -b [Branch Name]`.
